@@ -6,15 +6,15 @@
 
 <script>
 export default {
-  name: "Demo",
+  name: "Demo1",
   data() {
     return {
-      msg: "Welcome to Demo",
+      msg: "Welcome to Demo1"
     };
   },
   created() {
-    console.log("hello Demo");
-  },
+    console.log("hello Demo1");
+  }
 };
 </script>
 

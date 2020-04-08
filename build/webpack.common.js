@@ -8,6 +8,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PostStylus = require('poststylus');
 
+function resolve(dir) {
+	return path.join(__dirname, '..', dir)
+}
+
 const plugins = [
 	new VueLoaderPlugin(), // vue加载器
 	new webpack.BannerPlugin(`xs build at ${Date.now()}`), // 打包后在.js/.css页头的时间
@@ -77,7 +81,8 @@ module.exports = {
 			path.resolve(__dirname, 'src/assets')
 		],
 		alias: {
-			'vue$': 'vue/dist/vue.min.js'
+			'vue$': 'vue/dist/vue.esm.js',
+			'@': resolve('src'),
 		}
 	},
 	module: {
