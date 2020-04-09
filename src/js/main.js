@@ -2,7 +2,7 @@
 
 import Vue from 'vue'
 import App from './App'
-import store from './store/vuex.js';
+// import store from './store/vuex.js';
 import VueRouter from 'vue-router';
 import routesConfig from './router.js';
 
@@ -18,10 +18,10 @@ Vue.config.productionTip = true // 开启提示信息
 //     }
 // })
 
-Vue.use(VueRouter);
+Vue.use(VueRouter); // 将路由组件挂载到vue上
 
 new Vue({
-    store,
+    // store,
     router: router,
     render: h => h(App)
 }).$mount('#app');
